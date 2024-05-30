@@ -1,0 +1,16 @@
+
+	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8£³âÏü1J$1b19441b-99d1-43ad-a571-9068e10b88f0
+	java:S112P"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ËãÏü1J$1b566439-29de-40be-8895-442dde52b9c6
+”
+java:S2095="LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(õéµ¨ûÿÿÿÿ8×úàÏü1J$41971ab0-74ba-42c1-8435-bb6fc2dc0594
+¢
+java:S1149+"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰8ë®ÞÏü1J$dfff279d-d68e-47ee-9972-d2e2ba34b0d1
+r	java:S106
+"+Replace this use of System.out by a logger.(‚ÞÏ¥ýÿÿÿÿ8ì®ÞÏü1J$e452feaa-76af-4b22-9235-de24985c3e35
+m	java:S106"+Replace this use of System.out by a logger.(«òˆì8í®ÞÏü1J$b8adb3d2-d5aa-4a52-9eb2-500e665dfe72
+m	java:S106!"+Replace this use of System.out by a logger.(«òˆì8í®ÞÏü1J$d4049992-84d8-4f14-8050-47c7571d5902
+l	java:S106&"+Replace this use of System.out by a logger.(Äþ!8í®ÞÏü1J$b70adda8-2a55-4131-98b7-e59e5307c0e2
+r	java:S1061"+Replace this use of System.out by a logger.(­ËÖþÿÿÿÿ8î®ÞÏü1J$53d80d77-129b-4e21-bdc6-88ebcd6545a9
+m	java:S1069"+Replace this use of System.out by a logger.(‚¾âÉ8î®ÞÏü1J$c4cc21f7-f2d1-493d-9381-79a5a7c1859f
+r	java:S106>"+Replace this use of System.out by a logger.(Æ«‚ßøÿÿÿÿ8ñ®ÞÏü1J$8579a8e1-06b8-4f42-adb3-6bfa378c8ce4
+r	java:S106D"+Replace this use of System.out by a logger.(ñ—¸½úÿÿÿÿ8©³âÏü1J$60318cb0-06f9-432e-a6d0-49c1feeb491e
