@@ -46,7 +46,8 @@ public class Main {
             sb.append(s);
         }
 
-        System.out.println(sb);
+        String done = sb.toString();
+        System.out.println(done);
 
 
         //Create a new Date and time in format dd.MM.yyyy hh.mm.ss

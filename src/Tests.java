@@ -10,6 +10,6 @@ public class Tests {
 
     @Test
     public void testFalse() {
-        Assertions.assertEquals(1, 0);
+        Assertions.assertEquals(true, false);
     }
 }

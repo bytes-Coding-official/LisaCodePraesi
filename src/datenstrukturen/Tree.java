@@ -24,7 +24,7 @@ public class Tree {
             } else {
                 insert(root.getLeft(), node);
             }
-        } else if (node.getValue() > root.getValue()) {
+        } else if (node.getValue() >= root.getValue()) {
             if (root.getRight() == null) {
                 root.setRight(node);
             } else {

@@ -4,44 +4,60 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GUISwing {
-
-    private int clickCount = 0;
-    private JLabel label;
-    private JButton button;
-
-    public GUISwing() {
-        // Create the frame
-        JFrame frame = new JFrame("Click Counter");
+    public static void main(String[] args) {
+        // Erstellen des Hauptfensters
+        JFrame frame = new JFrame("Burger Builder");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(new FlowLayout());
+        frame.setSize(300, 300);
 
-        // Create the label
-        label = new JLabel("Button has been clicked 0 times.");
-        label.setForeground(Color.RED); // Red font color for the text
+        // Layout für die Inhalte
+        BoxLayout boxLayout = new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS);
+        frame.setLayout(boxLayout);
 
-        // Create the button
-        button = new JButton("Click Me!");
-        button.setBackground(Color.BLUE); // Blue background for the button
-        button.setForeground(Color.WHITE); // White text for the button
-        button.setFocusPainted(false); // Remove the focus border around the text
-        button.addActionListener(new ActionListener() {
+        // Titel
+        JLabel label = new JLabel("Burger");
+        label.setAlignmentX(Component.CENTER_ALIGNMENT);
+        frame.add(label);
+
+        // Checkboxes für die Zutaten
+        JCheckBox cheeseCheckBox = new JCheckBox("Cheese");
+        JCheckBox lettuceCheckBox = new JCheckBox("Lettuce");
+        JCheckBox tomatoCheckBox = new JCheckBox("Tomato");
+        JCheckBox onionCheckBox = new JCheckBox("Onion");
+        JCheckBox picklesCheckBox = new JCheckBox("Pickles");
+        JCheckBox ketchupCheckBox = new JCheckBox("Ketchup");
+
+        // Zutaten zum Frame hinzufügen
+        frame.add(cheeseCheckBox);
+        frame.add(lettuceCheckBox);
+        frame.add(tomatoCheckBox);
+        frame.add(onionCheckBox);
+        frame.add(picklesCheckBox);
+        frame.add(ketchupCheckBox);
+
+        // "FERTIG" Button
+        JButton finishButton = new JButton("FERTIG");
+        finishButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        finishButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clickCount++;
-                label.setText("Button has been clicked " + clickCount + " times.");
+                StringBuilder ingredients = new StringBuilder("Deine Zutaten sind:");
+                if (cheeseCheckBox.isSelected()) ingredients.append("\nCheese");
+                if (lettuceCheckBox.isSelected()) ingredients.append("\nLettuce");
+                if (tomatoCheckBox.isSelected()) ingredients.append("\nTomato");
+                if (onionCheckBox.isSelected()) ingredients.append("\nOnion");
+                if (picklesCheckBox.isSelected()) ingredients.append("\nPickles");
+                if (ketchupCheckBox.isSelected()) ingredients.append("\nKetchup");
+
+                JOptionPane.showMessageDialog(frame, ingredients.toString());
             }
         });
 
-        // Add components to the frame
-        frame.add(label);
-        frame.add(button);
+        // Button zum Frame hinzufügen
+        frame.add(finishButton);
 
-        // Set the frame size and make it visible
-        frame.setSize(300, 100);
+        // Anzeigen des Frames
         frame.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(GUISwing::new);
-    }
 }
